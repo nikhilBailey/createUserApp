@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Create User App
+This is a Password Validation Challenge App - a gamified React application that challenges users to create an account by satisfying 20 levels of increasingly complex password requirements.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Users must progressively unlock and satisfy password validation levels (0-20) to successfully register. The requirements escalate from simple to absurdly complex. At the end, the entire game solves to around 120 unique passwords that users are forced to mathematically deduce.
 
-## Available Scripts
+## Levels Requirements
+- 1-4 Basic rules: uppercase/lowercase, special characters, length limits
+- 5-10 Structural rules: distinct first/last chars, even length, vowel ratios
+- 11-14 Content rules: specific words ("count", "styx"), vowel casing
+- 15-20 Advanced rules: specific symbols (~, |), divisibility by 7, prime digit patterns to fill all empty slots
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+- Progressive unlocking - requirements reveal one at a time
+- Real-time validation with tooltip feedback
+- Anti-cheat measures - copy/paste disabled at level 11
+- Password masking - input becomes hidden at level 15
+- Celebration page with confetti animation upon completion
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+React 18 + React Router
+Bootstrap/Reactstrap for UI
+React Confetti for celebrations
 
-### `npm test`
+## User Flow
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Login page → Navigate to CreateUser
+CreateUser → Solve all 21 password levels
+Login → Enter your new credentials
+Home → Celebrate with confetti!
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This is essentially a puzzle game disguised as a registration form - a fun way to demonstrate how complex password requirements can become.
